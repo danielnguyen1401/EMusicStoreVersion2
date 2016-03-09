@@ -12,6 +12,9 @@
 
     <title>Music Store Website</title>
 
+    <%--Angular JS--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <%--<link href="css/bootstrap.min.css" rel="stylesheet">--%>
     <link href="<c:url value="/resources/css/bootstrap.min.css"/>" rel="stylesheet">

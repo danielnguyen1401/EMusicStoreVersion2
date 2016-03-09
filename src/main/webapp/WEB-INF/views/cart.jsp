@@ -14,34 +14,39 @@
             </div>
         </section>
 
-        <section class="container">
-            <div>
-                <a class="btn btn-danger pull-left"><span class="glyphicon glyphicon-remove-sign"/>Clear Cart</a>
-            </div>
+        <section class="container" ng-app="cartApp">
 
-            <table class="table table-hover">
-                <tr>
-                    <th>Product</th>
-                    <th>Unit Price</th>
-                    <th>Quantity</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td>productName</td>
-                    <td>productPrice</td>
-                    <td>quantity</td>
-                    <td>totalPrice</td>
-                    <td>remove button</td>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th>Grand Total</th>
-                    <th>grandTotal</th>
-                    <th></th>
-                </tr>
-            </table>
-            <a href="<spring:url value="/productList"/>">Continue Shopping</a>
+            <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')">
+
+                <div>
+                    <a class="btn btn-danger pull-left"><span class="glyphicon glyphicon-remove-sign"/>Clear Cart</a>
+                </div>
+
+                <table class="table table-hover">
+                    <tr>
+                        <th>Product</th>
+                        <th>Unit Price</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr ng-repeat="item in cart.cartItems">
+                        <td>{{item.product.productName}}</td>
+                        <td>{{item.product.productPrice}}</td>
+                        <td>{{item.quantity}}</td>
+                        <td>{{item.totalPrice}}</td>
+                        <td><a href="#" class="">Remove</a></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Grand Total</th>
+                        <th>grandTotal</th>
+                        <th></th>
+                    </tr>
+                </table>
+                <a href="<spring:url value="/productList"/>">Continue Shopping</a>
+            </div>
         </section>
     </div>
 
