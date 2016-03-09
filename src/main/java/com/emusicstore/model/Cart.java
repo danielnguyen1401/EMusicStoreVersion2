@@ -43,7 +43,7 @@ public class Cart {
         this.grandTotal = grandTotal;
     }
 
-    public void addCartItems(CartItem item) {
+    public void addCartItem(CartItem item) {
         String productId = item.getProduct().getProductId();
 
         if (cartItems.containsKey(productId)) {
