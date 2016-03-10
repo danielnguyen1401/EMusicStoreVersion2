@@ -1,6 +1,8 @@
-var cartApp = angular.module('cartApp', []);
 
-cartApp.controller('cartCtrl', function ($scope, $http) {
+var cartApp = angular.module("cartApp", []);
+
+cartApp.controller("cartCtrl", function ($scope, $http) {
+
     $scope.refreshCart = function (cartId) {
         $http.get('/eMusicStore/rest/cart/' + $scope.cartId).success(function (data) {
             $scope.cart = data;
@@ -17,7 +19,7 @@ cartApp.controller('cartCtrl', function ($scope, $http) {
     };
 
     $scope.addToCart = function (productId) {
-        $http.put('/eMusicStore/rest/cart/add' + productId).success(function (data) {
+        $http.put('/eMusicStore/rest/cart/add/' + productId).success(function (data) {
             $scope.refreshCart($http.get('/eMusicStore/rest/cart/cartId'));
             alert("Product successfully added to the cart!");
         });
