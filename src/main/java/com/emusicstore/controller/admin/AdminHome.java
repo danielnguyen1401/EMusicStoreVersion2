@@ -12,7 +12,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping(value = "/admin")
-public class AdminController {
+public class AdminHome {
 
     @Autowired
     private ProductService productService;
