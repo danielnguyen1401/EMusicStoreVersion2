@@ -31,13 +31,13 @@
                     <td>${product.productCondition}</td>
                     <td>${product.productPrice} USD</td>
                     <td>
-                        <a href="<spring:url value="/productList/viewProduct/${product.productId}"/>"/>
+                        <a href="<spring:url value="/product/viewProduct/${product.productId}"/>"/>
                         <span class="glyphicon glyphicon-info-sign"></span>
 
-                        <a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productId}"/>"/>
+                        <a href="<spring:url value="/admin/product/deleteProduct/${product.productId}"/>"/>
                         <span class="glyphicon glyphicon-trash"></span>
 
-                        <a href="<spring:url value="/admin/productInventory/editProduct/${product.productId}"/>"/>
+                        <a href="<spring:url value="/admin/product/editProduct/${product.productId}"/>"/>
                         <span class="glyphicon glyphicon-edit"></span>
                     </td>
                 </tr>

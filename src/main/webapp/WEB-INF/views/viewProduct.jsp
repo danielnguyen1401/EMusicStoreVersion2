@@ -19,7 +19,7 @@
             <div class="col-md-5">
                 <h3>${product.productName}</h3>
 
-                <p><strong>Description</strong> : ${product.productDescription}</p>
+                <p>${product.productDescription}</p>
 
                 <p><strong>Manufacturer</strong> : ${product.productManufacturer}</p>
 
@@ -32,7 +32,7 @@
                 <br>
 
                 <c:set var="role" scope="page" value="${param.role}"/>
-                <c:set var="url" scope="page" value="/productList"/>
+                <c:set var="url" scope="page" value="/product/productList"/>
 
                 <c:if test="${role='admin'}">
                     <c:set var="url" scope="page" value="/admin/productInventory"/>
