@@ -20,6 +20,11 @@
         </div>
 
         <div class="form-group">
+            <label for="name">Email</label>
+            <form:input path="customerEmail" id="email" class="form-Control"/>
+        </div>
+
+        <div class="form-group">
             <label for="phone">Phone</label>
             <form:input path="customerPhone" id="phone" class="form-Control"/>
         </div>
